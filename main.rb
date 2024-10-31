@@ -1,16 +1,5 @@
 #!/usr/bin/env ruby
 
-
-
-
-def next_smaller(n)
-
-end
-
-puts next_smaller(531) # 513
-
-
-
 def alphabet_position(t)t.downcase.gsub(/[^a-z]/,"").codepoints.map{|e|e-96}.join(" ")end
 
 p alphabet_position("The sunset sets at twelve o' clock.")
@@ -54,7 +43,7 @@ p ip_to_int32("128.32.10.1")    # 2149583361
 
 
 
-def smallest(n,x=n.to_s.split("",-1).map{|e|e.to_i},all=[])
+def smallest(n,x=x.split("",-1).map{|e|e.to_i},all=[])
     x.pop
     for e,i in x.each_with_index do for l,j in x.each_with_index
         y=x.map(&:clone);y.delete_at i;y.insert j,e
